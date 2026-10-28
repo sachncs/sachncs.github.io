@@ -12,6 +12,7 @@ const metadata: Record<string, [string, string]> = {
  '/repos': ['Open Source & Repositories — Sachin', 'Open-source AI, agent, retrieval, evaluation, and production engineering projects by Sachin.'],
  '/writing': ['Writing on AI Architecture & Engineering — Sachin', 'Technical writing on production AI, agents, retrieval, evaluation, distributed systems, architecture, reliability, and engineering.'],
  '/connect': ['Connect with Sachin — AI/ML Architect', 'Connect with Sachin for conversations around AI architecture, production AI, agents, retrieval, evaluation, engineering, and technical leadership.'],
+ '/fleetpilot': ['FleetPilot — Visual fleet planning and route optimization', 'Visualize your fleet, organize delivery demand, optimize routes, and review every stop before dispatch with the open-source FleetPilot workspace.'],
 };
 export function render(path: string) {
  const article = articles.find(a => `/writing/${a.slug}` === path);
