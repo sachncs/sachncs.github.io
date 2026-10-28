@@ -14,5 +14,7 @@ export default function App({ path = '/' }: { path?: string }) {
  const repository = repositories.find(r => path === `/${r.name}`);
  const pages: Record<string, React.ReactNode> = { '/': <Home />, '/about-me': <AboutMe />, '/work': <Work />, '/repos': <Repositories />, '/writing': <Writing />, '/connect': <Connect />, '/fleetpilot': <FleetPilotProduct />, '/fleetpilot/docs': <FleetPilotDocs /> };
  const page = pages[path] || (article ? <ArticlePage article={article} /> : repository ? <Project repository={repository} /> : <PageIntro eyebrow="404 / PAGE NOT FOUND" title="A missing connection."><p>This page is not available. Explore the <a href="/repos">repository index</a> or <a href="/">return home</a>.</p></PageIntro>);
+ const isFleetPilot = path === '/fleetpilot' || path.startsWith('/fleetpilot/');
+ if (isFleetPilot) return <><a className="skip-link fp-skip-link" href="#main-content">Skip to content</a><main className="product-main" id="main-content" tabIndex={-1}>{page}</main></>;
  return <><a className="skip-link" href="#main-content">Skip to content</a><Navigation path={path} /><main className="shell" id="main-content" tabIndex={-1}>{page}</main><Footer /></>;
 }

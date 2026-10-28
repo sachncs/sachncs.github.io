@@ -32,6 +32,10 @@ function ProductMap(): React.ReactElement {
   );
 }
 
+export function FleetPilotFooter(): React.ReactElement {
+  return <footer className="fp-site-footer"><a className="fp-lockup" href="/fleetpilot"><span>F</span> FleetPilot</a><p>Open-source route intelligence · ISC</p><nav aria-label="FleetPilot footer"><a href="/fleetpilot">Product</a><a href="/fleetpilot/docs">Documentation</a><a href={githubUrl}>GitHub ↗</a><a href="/">Sachin ↗</a></nav></footer>;
+}
+
 export function FleetPilotProduct(): React.ReactElement {
   return (
     <div className="fleet-product">
@@ -86,6 +90,7 @@ export function FleetPilotProduct(): React.ReactElement {
         <p className="fp-kicker">Plan with the full picture</p><h2>Turn today’s delivery demand into a route you can trust.</h2>
         <div className="fp-actions"><a className="fp-primary" href="/fleetpilot/docs#get-started">Get started <Arrow /></a><a className="fp-secondary" href="/fleetpilot/docs">Open documentation</a></div>
       </section>
+      <FleetPilotFooter />
     </div>
   );
 }

@@ -1,3 +1,5 @@
+import { FleetPilotFooter } from './FleetPilot';
+
 const repoUrl = 'https://github.com/sachncs/fleetpilot';
 
 const sections = [
@@ -91,6 +93,7 @@ export function FleetPilotDocs(): React.ReactElement {
           </section>
         </article>
       </div>
+      <FleetPilotFooter />
     </div>
   );
 }
