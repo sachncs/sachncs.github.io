@@ -37,7 +37,7 @@ export function FleetPilotProduct(): React.ReactElement {
     <div className="fleet-product">
       <div className="fp-product-nav">
         <a className="fp-lockup" href="/fleetpilot" aria-label="FleetPilot product page"><span>F</span> FleetPilot</a>
-        <div><a href="#workflow">Workflow</a><a href="#capabilities">Capabilities</a><a href={githubUrl}>Source <Arrow /></a></div>
+        <div><a href="#workflow">Workflow</a><a href="#capabilities">Capabilities</a><a href="/fleetpilot/docs">Docs</a><a href={githubUrl}>Source <Arrow /></a></div>
       </div>
 
       <section className="fp-hero">
@@ -45,7 +45,7 @@ export function FleetPilotProduct(): React.ReactElement {
           <p className="fp-kicker"><span /> Open-source route intelligence</p>
           <h1>See the whole fleet.<br />Plan the right routes.</h1>
           <p className="fp-lead">FleetPilot turns depots, vehicles, and delivery demand into one clear operating picture—then builds routes your team can inspect before dispatch.</p>
-          <div className="fp-actions"><a className="fp-primary" href={`${githubUrl}#readme`}>Run FleetPilot <Arrow /></a><a className="fp-secondary" href={githubUrl}>Explore the source</a></div>
+          <div className="fp-actions"><a className="fp-primary" href="/fleetpilot/docs#get-started">Run FleetPilot <Arrow /></a><a className="fp-secondary" href="/fleetpilot/docs">Read the docs</a></div>
           <p className="fp-proof">No login · Local-first data · Self-hosted</p>
         </div>
         <ProductMap />
@@ -79,12 +79,12 @@ export function FleetPilotProduct(): React.ReactElement {
 
       <section className="fp-architecture">
         <div><p className="fp-kicker">Built in the open</p><h2>Serious route intelligence, without the enterprise ceremony.</h2></div>
-        <div className="fp-architecture-copy"><p>FleetPilot is a TypeScript application with a production web console, SQLite persistence, background optimization workers, WebSocket progress, and a container-ready runtime.</p><div className="fp-tech"><span>ALNS</span><span>BRKGA</span><span>MapLibre</span><span>Next.js</span><span>SQLite</span><span>Docker</span></div><a href={githubUrl}>Read the architecture and source <Arrow /></a></div>
+        <div className="fp-architecture-copy"><p>FleetPilot is a TypeScript application with a production web console, SQLite persistence, background optimization workers, WebSocket progress, and a container-ready runtime.</p><div className="fp-tech"><span>ALNS</span><span>BRKGA</span><span>MapLibre</span><span>Next.js</span><span>SQLite</span><span>Docker</span></div><a href="/fleetpilot/docs#architecture">Read the standalone architecture guide <Arrow /></a></div>
       </section>
 
       <section className="fp-final">
         <p className="fp-kicker">Plan with the full picture</p><h2>Turn today’s delivery demand into a route you can trust.</h2>
-        <div className="fp-actions"><a className="fp-primary" href={`${githubUrl}#readme`}>Get started <Arrow /></a><a className="fp-secondary" href={githubUrl}>View on GitHub</a></div>
+        <div className="fp-actions"><a className="fp-primary" href="/fleetpilot/docs#get-started">Get started <Arrow /></a><a className="fp-secondary" href="/fleetpilot/docs">Open documentation</a></div>
       </section>
     </div>
   );

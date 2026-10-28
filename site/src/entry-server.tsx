@@ -4,7 +4,7 @@ import { profile, navigation } from './data/profile';
 import { articles } from './components/Shared';
 import { repositories } from './pages/Repositories';
 export { profile, navigation, articles, repositories };
-export const routes = [...navigation.map(([path]) => path), ...articles.map(a => `/writing/${a.slug}`), ...repositories.map(r => `/${r.name}`)];
+export const routes = [...navigation.map(([path]) => path), ...articles.map(a => `/writing/${a.slug}`), ...repositories.map(r => `/${r.name}`), '/fleetpilot/docs'];
 const metadata: Record<string, [string, string]> = {
  '/': [`${profile.name} — ${profile.title}`, profile.bio],
  '/about-me': ['About Sachin — AI/ML Architect & Engineer', 'Learn about Sachin’s approach to AI architecture, production engineering, agents, retrieval, evaluation, enterprise AI systems, and technical leadership.'],
@@ -13,6 +13,7 @@ const metadata: Record<string, [string, string]> = {
  '/writing': ['Writing on AI Architecture & Engineering — Sachin', 'Technical writing on production AI, agents, retrieval, evaluation, distributed systems, architecture, reliability, and engineering.'],
  '/connect': ['Connect with Sachin — AI/ML Architect', 'Connect with Sachin for conversations around AI architecture, production AI, agents, retrieval, evaluation, engineering, and technical leadership.'],
  '/fleetpilot': ['FleetPilot — Visual fleet planning and route optimization', 'Visualize your fleet, organize delivery demand, optimize routes, and review every stop before dispatch with the open-source FleetPilot workspace.'],
+ '/fleetpilot/docs': ['FleetPilot Docs — Setup, architecture, API, and deployment', 'Install FleetPilot, run the production container, understand the architecture, integrate the REST API, and prepare a self-hosted deployment.'],
 };
 export function render(path: string) {
  const article = articles.find(a => `/writing/${a.slug}` === path);
