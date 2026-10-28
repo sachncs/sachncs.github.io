@@ -6,7 +6,7 @@ That means moving between different levels of detail. At one moment I may be dis
 
 I lead work across the full lifecycle: identifying valuable problems, shaping technical strategy, prototyping, evaluating, engineering, deploying, and supporting long-term adoption. I want the system to remain useful after the initial team moves on. That requires maintainable interfaces, clear ownership, and a way to learn from production behavior.
 
-## AI is a systems problem.
+## AI is a systems problem
 
 A model is one component in a larger chain. A user brings an intent and a workflow. The application translates that into context, retrieval requests, tool calls, and model interactions. Data quality, identity, APIs, infrastructure, and operational controls shape what the system can actually deliver. A strong model cannot recover information that the retrieval layer never supplied, or make an unauthorized action acceptable.
 
