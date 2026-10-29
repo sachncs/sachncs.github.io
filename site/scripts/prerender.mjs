@@ -39,7 +39,7 @@ ${path === '/404' ? '<meta name="robots" content="noindex, follow" />' : ''}
 <link rel="alternate" type="application/rss+xml" title="${escape(profile.name)} — Writing" href="${absolute('/feed.xml')}" />
 <script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@graph': graph }).replace(/</g, '\\u003c')}</script>`;
  const productRoute = path === '/fleetpilot' || path.startsWith('/fleetpilot/');
- const output = template.replace(/<title>.*?<\/title>/, '').replace(/(?:src|href)="\.\/assets\//g, 'src="/assets/').replace(/href="\.\/(favicon|apple-touch-icon)/g, 'href="/$1').replace(productRoute ? 'href="/favicon.svg"' : '__keep-default-icon__', 'href="/fleetpilot-icon.svg"').replace(productRoute ? 'content="#151715"' : '__keep-default-theme__', 'content="#090a0a"').replace('<!--page-head-->', head).replace('<!--page-html-->', html);
+ const output = template.replace(/<title>.*?<\/title>/, '').replace(/(?:src|href)="\.\/assets\//g, 'src="/assets/').replace(/href="\.\/(favicon|apple-touch-icon)/g, 'href="/$1').replace(productRoute ? 'href="/favicon.svg"' : '__keep-default-icon__', 'href="/fleetpilot-icon.svg"').replace(productRoute ? 'href="/apple-touch-icon.png"' : '__keep-default-touch-icon__', 'href="/fleetpilot-apple-touch-icon.png"').replace(productRoute ? 'content="#151715"' : '__keep-default-theme__', 'content="#090a0a"').replace('<!--page-head-->', head).replace('<!--page-html-->', html);
  const filename = path === '/404' ? 'dist/404.html' : path === '/' ? 'dist/index.html' : `dist${path}/index.html`;
  await mkdir(dirname(filename), { recursive: true });
  await writeFile(filename, output);

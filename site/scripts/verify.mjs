@@ -13,6 +13,11 @@ for (const path of [...routes, '/404']) {
  assert(html.includes('application/ld+json'), `${path}: structured data`);
  assert(html.includes('property="og:image" content="https://sachncs.github.io/social-preview.png"'), `${path}: absolute social image`);
  assert(html.includes('id="main-content"'), `${path}: main content`);
+ const productRoute = path === '/fleetpilot' || path.startsWith('/fleetpilot/');
+ if (productRoute) {
+   assert(html.includes('href="/fleetpilot-icon.svg"'), `${path}: FleetPilot favicon`);
+   assert(html.includes('href="/fleetpilot-apple-touch-icon.png"'), `${path}: FleetPilot touch icon`);
+ }
  assert(!html.includes('href="#"'), `${path}: no dead links`);
  assert(!html.includes('/repo/') && !html.includes('/repos/'), `${path}: no nested repository routes`);
  assert(!/50k|800ms|70%|five internal teams|two enterprise rollouts|most popular|book a consultation/i.test(html), `${path}: unsupported old claims`);
